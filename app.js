@@ -1,92 +1,8 @@
 // LuxeBeauty Application Script
 
-// 1. Mock Product Database (Premium and Standard Products)
-const PRODUCTS = [
-  {
-    id: 1,
-    brand: "Charlotte Tilbury",
-    name: "Magic Cream Moisturiser",
-    category: "skincare",
-    price: "£52",
-    rating: 4.8,
-    reviews: 142,
-    image: "https://images.unsplash.com/photo-1608248597481-496100c8c836?q=80&w=600&auto=format&fit=crop",
-    tag: "Editor's Pick",
-    description: "An award-winning, rich moisturizer that floods the skin with moisture, creating a glowing, plumped canvas for makeup. Made with hyaluronic acid, rosehip oil, and vitamins C & E.",
-    metrics: { Hydration: 95, Longevity: 85, Texture: 90, Value: 70 },
-    link: "https://www.charlottetilbury.com"
-  },
-  {
-    id: 2,
-    brand: "e.l.f. Cosmetics",
-    name: "Halo Glow Liquid Filter",
-    category: "makeup",
-    price: "£15",
-    rating: 4.6,
-    reviews: 389,
-    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=600&auto=format&fit=crop",
-    tag: "Best Value Dupe",
-    description: "A multi-purpose, liquid glow booster infused with skin-loving ingredients like squalane and hyaluronic acid. Creates a soft-focus social filter effect in real life.",
-    metrics: { Hydration: 85, Longevity: 80, Texture: 88, Value: 98 },
-    link: "https://www.elfcosmetics.co.uk"
-  },
-  {
-    id: 3,
-    brand: "Clinique",
-    name: "Moisture Surge 100H Hydrator",
-    category: "skincare",
-    price: "£42",
-    rating: 4.7,
-    reviews: 215,
-    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop",
-    tag: "Highly Rated",
-    description: "An oil-free gel-cream moisturizer with exclusive aloe bio-ferment and hyaluronic acid that penetrates deep into skin's surface for hydration that lasts 100 hours.",
-    metrics: { Hydration: 98, Longevity: 90, Texture: 95, Value: 75 },
-    link: "https://www.clinique.co.uk"
-  },
-  {
-    id: 4,
-    brand: "The Ordinary",
-    name: "Niacinamide 10% + Zinc 1%",
-    category: "clean",
-    price: "£6",
-    rating: 4.5,
-    reviews: 1204,
-    image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=600&auto=format&fit=crop",
-    tag: "Ingredient Focus",
-    description: "A high-strength vitamin and mineral blemish formula targets breakouts, minimizes pores, and regulates sebum activity. Vegan, cruelty-free, and oil-free.",
-    metrics: { Hydration: 60, Longevity: 80, Texture: 75, Value: 99 },
-    link: "https://theordinary.com"
-  },
-  {
-    id: 5,
-    brand: "Estée Lauder",
-    name: "Advanced Night Repair Serum",
-    category: "skincare",
-    price: "£89",
-    rating: 4.9,
-    reviews: 512,
-    image: "https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=600&auto=format&fit=crop",
-    tag: "Best Seller",
-    description: "A patented deep-penetrating serum that reduces the appearance of multiple signs of aging. Skin feels smoother, more hydrated, and looks younger and radiant.",
-    metrics: { Hydration: 92, Longevity: 95, Texture: 88, Value: 65 },
-    link: "https://www.esteelauder.co.uk"
-  },
-  {
-    id: 6,
-    brand: "MAC Cosmetics",
-    name: "Studio Fix Fluid SPF 15",
-    category: "makeup",
-    price: "£36",
-    rating: 4.7,
-    reviews: 443,
-    image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600&auto=format&fit=crop",
-    tag: "Pro Favorite",
-    description: "An oil-controlling formula that offers a natural-matte finish with medium-to-full buildable coverage. Long-wearing for 24 hours. Resists sweat and humidity.",
-    metrics: { Hydration: 50, Longevity: 98, Texture: 85, Value: 80 },
-    link: "https://www.maccosmetics.co.uk"
-  }
-];
+// 1. Dynamic Product Database loaded at runtime
+let PRODUCTS = [];
+
 
 // 2. Ingredients Dictionary for Safe-Decoder
 const INGREDIENTS_DB = {
@@ -108,6 +24,14 @@ let searchQuery = "";
 
 // Initialize App
 document.addEventListener("DOMContentLoaded", () => {
+  // Fetch products dynamically from JSON database
+  fetch('products.json')
+    .then(res => res.json())
+    .then(data => {
+      PRODUCTS = data;
+    })
+    .catch(err => console.error("Error loading products database:", err));
+
   renderProducts();
   setupEventListeners();
   loadInitialChat();
@@ -322,15 +246,21 @@ function showQuizResults() {
   // Filter products based on concerns/budget
   let matches = [];
   if (quizData.budget.includes("Budget")) {
-    matches = PRODUCTS.filter(p => p.price.replace("£","") <= 20);
+    matches = PRODUCTS.filter(p => {
+      const priceNum = parseInt(p.price.replace(/[^\d]/g, ""));
+      return !isNaN(priceNum) && priceNum <= 20;
+    });
   } else if (quizData.budget.includes("Clean")) {
     matches = PRODUCTS.filter(p => p.category === "clean");
   } else {
-    matches = PRODUCTS.filter(p => p.price.replace("£","") > 20);
+    matches = PRODUCTS.filter(p => {
+      const priceNum = parseInt(p.price.replace(/[^\d]/g, ""));
+      return !isNaN(priceNum) && priceNum > 20;
+    });
   }
   
-  if (matches.length === 0) {
-    matches = [PRODUCTS[0], PRODUCTS[3]]; // Fallbacks
+  if (matches.length === 0 && PRODUCTS.length > 0) {
+    matches = [PRODUCTS[0], PRODUCTS[Math.min(3, PRODUCTS.length - 1)]]; // Fallbacks
   }
 
   matches.forEach(p => {
