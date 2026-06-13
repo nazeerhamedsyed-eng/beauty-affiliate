@@ -229,5 +229,34 @@
     "is_featured": true,
     "review_detail": "\n    <h2>An Honest Review of Dior's Addict Lip Glow Oil</h2>\n    <p>We tested Dior's Addict Lip Glow Oil for over three weeks. The formula stands out immediately for its refined texture and clean absorption, leaving the skin feeling remarkably balanced. Under daily wear, it holds up beautifully under makeup or as a standalone care step.</p>\n    <h3>Formula & Key Ingredients</h3>\n    <p>This product utilizes high-standard active ingredients, primarily focusing on <strong>Cherry Oil, Squalane, Glycerin</strong>. These work in synergy to restore moisture levels, protect the skin barrier, and deliver visible results without cause for irritation.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of \u00a332, this offers exceptional quality and holds standard-setting performance values in the makeup market. It is highly recommended for anyone looking to optimize their daily routine.</p>\n    ",
     "id": 8
+  },
+  {
+    "id": 9,
+    "brand": "Dior",
+    "name": "Capture Totale Super Potent Serum",
+    "slug": "dior-capture-totale-super-potent-serum",
+    "category": "skincare",
+    "price": "£75",
+    "rating": 4.7,
+    "reviews": 184,
+    "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop",
+    "tag": "Anti-Aging Power",
+    "description": "A cell-youth-activating intense serum that visibly plumps, firms, and refines the skin texture for a youthful radiance.",
+    "metrics": {
+      "Hydration": 90,
+      "Longevity": 85,
+      "Texture": 92,
+      "Value": 68
+    },
+    "link": "https://www.dior.com",
+    "ingredients": [
+      "Longoza Extract",
+      "Hyaluronic Acid",
+      "Niacinamide",
+      "Glycerin",
+      "Squalane"
+    ],
+    "review_detail": "\n    <h2>An Honest Review of Dior's Capture Totale Super Potent Serum</h2>\n    <p>We tested Dior's Capture Totale Super Potent Serum for over three weeks. The formula stands out immediately for its refined texture and clean absorption, leaving the skin feeling remarkably balanced. Under daily wear, it holds up beautifully under makeup or as a standalone care step.</p>\n    <h3>Formula & Key Ingredients</h3>\n    <p>This product utilizes high-standard active ingredients, primarily focusing on <strong>Longoza Extract, Hyaluronic Acid, Niacinamide</strong>. These work in synergy to restore moisture levels, protect the skin barrier, and deliver visible results without cause for irritation.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of £75, this offers exceptional quality and holds standard-setting performance values in the skincare market. It is highly recommended for anyone looking to optimize their daily routine.</p>\n    ",
+    "is_featured": false
   }
 ]
