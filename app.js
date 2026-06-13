@@ -48,8 +48,10 @@ function renderProducts() {
     const name = card.getAttribute("data-name");
     
     const matchesCategory = activeCategory === "all" || category === activeCategory;
-    const matchesSearch = name.includes(searchQuery.toLowerCase()) || 
-                          brand.includes(searchQuery.toLowerCase());
+    const searchTerms = searchQuery.toLowerCase().split(/\s+/).filter(Boolean);
+    const matchesSearch = searchTerms.every(term => 
+      name.includes(term) || brand.includes(term)
+    );
                           
     if (matchesCategory && matchesSearch) {
       card.style.display = "block";
