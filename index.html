@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GlowVault Direct - Discover high-performance skincare and makeup. Honest reviews, luxury dupes, and ingredient decoders.">
+  <title>GlowVault Direct | Curated Beauty Review & Comparison Portal</title>
+  
+  <!-- Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- AIO SEO Schema Markup (Factual Structured Data for AI Search Engines) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "GlowVault Direct",
+    "url": "https://glowvaultdirect.com",
+    "description": "Premium beauty comparison and dupe matching portal.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://glowvaultdirect.com/?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">GLOW<span>VAULT</span></a>
+      <ul class="nav-links">
+        <li><a href="#shelf" class="active">Beauty Shelf</a></li>
+        <li><a href="#dupes">Dupe Matrix</a></li>
+        <li><a href="#quiz">Skin Quiz</a></li>
+        <li><a href="#decoder">Ingredient Decoder</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn btn-outline nav-btn" onclick="openAdminTool()">Link Helper</button>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">AIO Optimized • GlowVault Direct</span>
+      <h1>Curated Science Meet Luxury Self-Care</h1>
+      <p>Discover established, premium brands. Get ingredient breakdowns, find perfect drugstore dupes, and shop directly from official manufacturers to guarantee 100% original quality.</p>
+      <div class="hero-buttons">
+        <a href="#shelf" class="btn btn-primary">Browse The Shelf</a>
+        <a href="#quiz" class="btn btn-secondary">Take Skincare Quiz</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Search and Category Shelf -->
+  <section id="shelf" class="section shelf-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">Active Curation</span>
+        <h2>The Beauty Shelf</h2>
+        <p>Search and filter high-standard products. Click any item for detailed reviews and direct manufacturer links.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-controls">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="product-search" placeholder="Search brands, ingredients, products...">
+        </div>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-category="all">All Products</button>
+          <button class="filter-btn" data-category="skincare">Skincare</button>
+          <button class="filter-btn" data-category="makeup">Makeup</button>
+          <button class="filter-btn" data-category="clean">Clean Beauty</button>
+        </div>
+      </div>
+
+      <!-- Product Grid (Compiled statically for SEO/AIO, client-side hydrated) -->
+      <div class="product-grid" id="product-grid">
+        
+        <div class="product-card" data-category="skincare" data-brand="charlotte tilbury" data-name="magic cream moisturiser" data-id="1">
+          <a href="products/charlotte-tilbury-magic-cream.html" style="display: block; color: inherit;">
+            <div class="product-card-img">
+              <img src="https://images.unsplash.com/photo-1608248597481-496100c8c836?q=80&w=600&auto=format&fit=crop" alt="Magic Cream Moisturiser">
+              
+              <span class="product-tag">Editor's Pick</span>
+              
+            </div>
+            <div class="product-card-info">
+              <span class="product-brand">$Charlotte Tilbury</span>
+              <h3 class="product-title">Magic Cream Moisturiser</h3>
+              <div class="product-card-meta">
+                <span class="product-price">Â£52</span>
+                <div class="rating-stars">
+                  
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star" style="color:#DDD">&#9733;</span>
+                    
+                  
+                  <span class="rating-count">(142)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-card" data-category="makeup" data-brand="e.l.f. cosmetics" data-name="halo glow liquid filter" data-id="2">
+          <a href="products/elf-halo-glow-liquid-filter.html" style="display: block; color: inherit;">
+            <div class="product-card-img">
+              <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=600&auto=format&fit=crop" alt="Halo Glow Liquid Filter">
+              
+              <span class="product-tag">Best Value Dupe</span>
+              
+            </div>
+            <div class="product-card-info">
+              <span class="product-brand">$e.l.f. Cosmetics</span>
+              <h3 class="product-title">Halo Glow Liquid Filter</h3>
+              <div class="product-card-meta">
+                <span class="product-price">Â£15</span>
+                <div class="rating-stars">
+                  
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star" style="color:#DDD">&#9733;</span>
+                    
+                  
+                  <span class="rating-count">(389)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-card" data-category="skincare" data-brand="clinique" data-name="moisture surge 100h hydrator" data-id="3">
+          <a href="products/clinique-moisture-surge-100h.html" style="display: block; color: inherit;">
+            <div class="product-card-img">
+              <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop" alt="Moisture Surge 100H Hydrator">
+              
+              <span class="product-tag">Highly Rated</span>
+              
+            </div>
+            <div class="product-card-info">
+              <span class="product-brand">$Clinique</span>
+              <h3 class="product-title">Moisture Surge 100H Hydrator</h3>
+              <div class="product-card-meta">
+                <span class="product-price">Â£42</span>
+                <div class="rating-stars">
+                  
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star" style="color:#DDD">&#9733;</span>
+                    
+                  
+                  <span class="rating-count">(215)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-card" data-category="clean" data-brand="the ordinary" data-name="niacinamide 10% + zinc 1%" data-id="4">
+          <a href="products/the-ordinary-niacinamide-10-zinc-1.html" style="display: block; color: inherit;">
+            <div class="product-card-img">
+              <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=600&auto=format&fit=crop" alt="Niacinamide 10% + Zinc 1%">
+              
+              <span class="product-tag">Ingredient Focus</span>
+              
+            </div>
+            <div class="product-card-info">
+              <span class="product-brand">$The Ordinary</span>
+              <h3 class="product-title">Niacinamide 10% + Zinc 1%</h3>
+              <div class="product-card-meta">
+                <span class="product-price">Â£6</span>
+                <div class="rating-stars">
+                  
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star" style="color:#DDD">&#9733;</span>
+                    
+                  
+                  <span class="rating-count">(1204)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-card" data-category="skincare" data-brand="estã©e lauder" data-name="advanced night repair serum" data-id="5">
+          <a href="products/estee-lauder-advanced-night-repair.html" style="display: block; color: inherit;">
+            <div class="product-card-img">
+              <img src="https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=600&auto=format&fit=crop" alt="Advanced Night Repair Serum">
+              
+              <span class="product-tag">Best Seller</span>
+              
+            </div>
+            <div class="product-card-info">
+              <span class="product-brand">$EstÃ©e Lauder</span>
+              <h3 class="product-title">Advanced Night Repair Serum</h3>
+              <div class="product-card-meta">
+                <span class="product-price">Â£89</span>
+                <div class="rating-stars">
+                  
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star" style="color:#DDD">&#9733;</span>
+                    
+                  
+                  <span class="rating-count">(512)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-card" data-category="makeup" data-brand="mac cosmetics" data-name="studio fix fluid spf 15" data-id="6">
+          <a href="products/mac-studio-fix-fluid-spf-15.html" style="display: block; color: inherit;">
+            <div class="product-card-img">
+              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600&auto=format&fit=crop" alt="Studio Fix Fluid SPF 15">
+              
+              <span class="product-tag">Pro Favorite</span>
+              
+            </div>
+            <div class="product-card-info">
+              <span class="product-brand">$MAC Cosmetics</span>
+              <h3 class="product-title">Studio Fix Fluid SPF 15</h3>
+              <div class="product-card-meta">
+                <span class="product-price">Â£36</span>
+                <div class="rating-stars">
+                  
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star" style="color:#DDD">&#9733;</span>
+                    
+                  
+                  <span class="rating-count">(443)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-card" data-category="clean" data-brand="the ordinary" data-name="hyaluronic acid 2% + b5" data-id="7">
+          <a href="products/the-ordinary-hyaluronic-acid-2-b5.html" style="display: block; color: inherit;">
+            <div class="product-card-img">
+              <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop" alt="Hyaluronic Acid 2% + B5">
+              
+              <span class="product-tag">Hydration Hero</span>
+              
+            </div>
+            <div class="product-card-info">
+              <span class="product-brand">$The Ordinary</span>
+              <h3 class="product-title">Hyaluronic Acid 2% + B5</h3>
+              <div class="product-card-meta">
+                <span class="product-price">£8</span>
+                <div class="rating-stars">
+                  
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star" style="color:#DDD">&#9733;</span>
+                    
+                  
+                  <span class="rating-count">(894)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="product-card" data-category="makeup" data-brand="dior" data-name="addict lip glow oil" data-id="8">
+          <a href="products/dior-addict-lip-glow-oil.html" style="display: block; color: inherit;">
+            <div class="product-card-img">
+              <img src="https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?q=80&w=600&auto=format&fit=crop" alt="Addict Lip Glow Oil">
+              
+              <span class="product-tag">Viral Classic</span>
+              
+            </div>
+            <div class="product-card-info">
+              <span class="product-brand">$Dior</span>
+              <h3 class="product-title">Addict Lip Glow Oil</h3>
+              <div class="product-card-meta">
+                <span class="product-price">£32</span>
+                <div class="rating-stars">
+                  
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star">&#9733;</span>
+                    
+                  
+                    
+                    <span class="star" style="color:#DDD">&#9733;</span>
+                    
+                  
+                  <span class="rating-count">(731)</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- High vs Low Dupe Matrix Section -->
+  <section id="dupes" class="section dupes-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">Smart Curation</span>
+        <h2>Luxury vs. Standard Dupes</h2>
+        <p>Save money without compromising quality. We cross-reference formula ingredients to find the closest match.</p>
+      </div>
+
+      <div class="matrix-container">
+        <div class="matrix-card">
+          <div class="matrix-header">
+            <div class="matrix-col title-col">High-End Luxury</div>
+            <div class="matrix-col match-col">Match %</div>
+            <div class="matrix-col title-col">Standard Dupe</div>
+            <div class="matrix-col action-col">Quick Actions</div>
+          </div>
+          
+          <div class="matrix-body">
+            <!-- Row 1 -->
+            <div class="matrix-row">
+              <div class="matrix-product luxury">
+                <span class="brand">Charlotte Tilbury</span>
+                <span class="name">Flawless Filter (£39)</span>
+              </div>
+              <div class="matrix-match">
+                <div class="match-circle">94%</div>
+              </div>
+              <div class="matrix-product dupe">
+                <span class="brand">e.l.f. Cosmetics</span>
+                <span class="name">Halo Glow Liquid Filter (£15)</span>
+              </div>
+              <div class="matrix-actions">
+                <a href="https://www.charlottetilbury.com" target="_blank" class="btn btn-sm btn-outline">Buy Luxury</a>
+                <a href="https://www.elfcosmetics.co.uk" target="_blank" class="btn btn-sm btn-primary">Buy Dupe (Save £24)</a>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="matrix-row">
+              <div class="matrix-product luxury">
+                <span class="brand">Clinique</span>
+                <span class="name">Moisture Surge 100H (£42)</span>
+              </div>
+              <div class="matrix-match">
+                <div class="match-circle">91%</div>
+              </div>
+              <div class="matrix-product dupe">
+                <span class="brand">The Ordinary</span>
+                <span class="name">Natural Moisturizing Factors (£6)</span>
+              </div>
+              <div class="matrix-actions">
+                <a href="https://www.clinique.co.uk" target="_blank" class="btn btn-sm btn-outline">Buy Luxury</a>
+                <a href="https://theordinary.com" target="_blank" class="btn btn-sm btn-primary">Buy Dupe (Save £36)</a>
+              </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="matrix-row">
+              <div class="matrix-product luxury">
+                <span class="brand">Estée Lauder</span>
+                <span class="name">Advanced Night Repair (£89)</span>
+              </div>
+              <div class="matrix-match">
+                <div class="match-circle">88%</div>
+              </div>
+              <div class="matrix-product dupe">
+                <span class="brand">Manyo Factory</span>
+                <span class="name">Bifida Biome Complex (£22)</span>
+              </div>
+              <div class="matrix-actions">
+                <a href="https://www.esteelauder.co.uk" target="_blank" class="btn btn-sm btn-outline">Buy Luxury</a>
+                <a href="https://manyo.co" target="_blank" class="btn btn-sm btn-primary">Buy Dupe (Save £67)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skin Routine Quiz Section (Lead Gen Engine) -->
+  <section id="quiz" class="section quiz-section">
+    <div class="container">
+      <div class="quiz-box glass-panel">
+        <div class="quiz-intro" id="quiz-intro">
+          <span class="tag">Interactive Shopping Assistant</span>
+          <h2>Find Your Perfect Skincare Routine</h2>
+          <p>Answer 3 simple questions about your skin, and our algorithm will dynamically match you with original products from verified brands. We will email you a detailed routine guide.</p>
+          <button class="btn btn-primary" onclick="startQuiz()">Start Free Quiz</button>
+        </div>
+
+        <div class="quiz-questions" id="quiz-questions" style="display: none;">
+          <div class="quiz-progress-bar"><div class="progress" id="quiz-progress" style="width: 33%"></div></div>
+          <h3 id="question-title">What is your skin type?</h3>
+          <div class="quiz-options" id="quiz-options">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <div class="quiz-email" id="quiz-email" style="display: none;">
+          <h3>Your Routine is Ready!</h3>
+          <p>Enter your email to view your personalized routine and receive exclusive discount codes direct from verified manufacturers.</p>
+          <form id="quiz-lead-form" onsubmit="submitQuiz(event)">
+            <input type="email" id="lead-email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary">Show My Routine & Unlock Offers</button>
+          </form>
+        </div>
+
+        <div class="quiz-result" id="quiz-result" style="display: none;">
+          <h3>Your Recommended Routine</h3>
+          <div class="recommendations" id="quiz-recommendations">
+            <!-- Dynamic recommendations -->
+          </div>
+          <button class="btn btn-outline" onclick="resetQuiz()">Retake Quiz</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ingredient Decoder Tool Section -->
+  <section id="decoder" class="section decoder-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">Scientific Trust</span>
+        <h2>Ingredient Safe-Decoder</h2>
+        <p>Paste an ingredient list from any cosmetic product to instantly check its safety profile, primary function, and hazard rating.</p>
+      </div>
+
+      <div class="decoder-container">
+        <div class="decoder-input glass-panel">
+          <h3>Paste Ingredients</h3>
+          <textarea id="decoder-text" placeholder="e.g. Aqua, Niacinamide, Retinol, Glycerin, Phenoxyethanol..."></textarea>
+          <button class="btn btn-primary" onclick="decodeIngredients()">Analyze Ingredients</button>
+        </div>
+        <div class="decoder-output glass-panel" id="decoder-output">
+          <div class="empty-state">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <p>Paste text on the left and click analyze to decode chemicals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admin Link Helper Modal (Tool Demonstration) -->
+  <div class="modal" id="admin-modal" style="display: none;">
+    <div class="modal-content glass-panel">
+      <div class="modal-header">
+        <h3>Affiliate Link Helper (Admin Utility)</h3>
+        <button class="close-btn" onclick="closeAdminTool()">&times;</button>
+      </div>
+      <p>Paste a standard manufacturer URL below, select the network, and this tool will generate the parameterized tracking link structure for your organic social media posts.</p>
+      
+      <div class="form-group">
+        <label for="dest-url">Target Brand URL</label>
+        <input type="text" id="dest-url" placeholder="e.g., https://www.charlottetilbury.com/product/magic-cream">
+      </div>
+      
+      <div class="form-group">
+        <label for="network-select">Select Affiliate Platform</label>
+        <select id="network-select">
+          <option value="impact">Impact.com (e.g. Clinique/Deciem)</option>
+          <option value="awin">Awin (e.g. Charlotte Tilbury/MAC)</option>
+          <option value="cj">CJ Affiliate (e.g. Sephora)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="campaign-id">Traffic Source (Sub-ID)</label>
+        <input type="text" id="campaign-id" placeholder="e.g., tiktok-bio, pinterest-pin">
+      </div>
+
+      <button class="btn btn-primary" onclick="generateLink()">Build Tracking Link</button>
+
+      <div class="generated-box" id="generated-box" style="display: none;">
+        <label>Your Tracking Affiliate Link:</label>
+        <div class="copy-input">
+          <input type="text" id="aff-result" readonly>
+          <button onclick="copyGeneratedLink()">Copy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Conversational AI Stylist Chatbot -->
+  <div class="chat-wrapper">
+    <div class="chat-bubble" onclick="toggleChat()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span class="chat-badge">1</span>
+    </div>
+    
+    <div class="chat-window glass-panel" id="chat-window" style="display: none;">
+      <div class="chat-header">
+        <div class="chat-avatar"></div>
+        <div class="chat-title">
+          <h4>Luxe AI Stylist</h4>
+          <span>Online • Ask anything</span>
+        </div>
+        <button class="chat-close" onclick="toggleChat()">&times;</button>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="message system">
+          Hi! I am your Luxe AI Stylist. Tell me your skin concerns or what product type you are looking for, and I will find verified brand matches for you!
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Type skin concern (e.g. dry skin, foundation dupe)..." onkeypress="handleChatPress(event)">
+        <button onclick="sendChatMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>GLOW<span>VAULT</span></h3>
+          <p>Stunning £0 budget affiliate platform built with next-gen AIO optimization. Linking consumers to verified original manufacturers.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform Navigation</h4>
+          <ul>
+            <li><a href="#shelf">Beauty Shelf</a></li>
+            <li><a href="#dupes">Dupe Finder</a></li>
+            <li><a href="#quiz">Skin Quiz</a></li>
+            <li><a href="#decoder">Chemical Decoder</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GlowVault Direct. All products are affiliate-linked directly to official manufacturers. 100% original product authenticity guaranteed.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App JS Script -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1,
+    "brand": "Charlotte Tilbury",
+    "name": "Magic Cream Moisturiser",
+    "slug": "charlotte-tilbury-magic-cream",
+    "category": "skincare",
+    "price": "\u00c2\u00a352",
+    "rating": 4.8,
+    "reviews": 142,
+    "image": "https://images.unsplash.com/photo-1608248597481-496100c8c836?q=80&w=600&auto=format&fit=crop",
+    "tag": "Editor's Pick",
+    "description": "An award-winning, rich moisturizer that floods the skin with moisture, creating a glowing, plumped canvas for makeup. Made with hyaluronic acid, rosehip oil, and vitamins C & E.",
+    "metrics": {
+      "Hydration": 95,
+      "Longevity": 85,
+      "Texture": 90,
+      "Value": 70
+    },
+    "link": "https://www.charlottetilbury.com",
+    "ingredients": [
+      "Aqua",
+      "Glycerin",
+      "Hyaluronic Acid",
+      "Rosehip Oil",
+      "Tocopheryl Acetate"
+    ],
+    "review_detail": "<h2>An Honest Review of Charlotte Tilbury's Magic Cream</h2><p>Charlotte Tilbury's Magic Cream has long been a staple in makeup artists' kits, and after testing it for 30 days, we understand why. It acts as an incredible hydrating primer, smoothing dry patches and leaving the skin with a luminous, dew-like glow.</p><h3>Formula & Key Ingredients</h3><p>The magic lies in the 'Magic 8' matrix of ingredients, including Hyaluronic Acid to bind moisture, Rosehip and Camellia Oils to nourish, and Vitamins C & E to brighten. However, it does contain Fragrance, which may irritate highly sensitive skin types.</p><h3>Our Verdict</h3><p>If you want a luxurious prep cream before foundation, this is the gold standard. For daily hydration without makeup, there are more affordable alternatives available in our dupe finder database.",
+    "is_featured": true
+  },
+  {
+    "id": 2,
+    "brand": "e.l.f. Cosmetics",
+    "name": "Halo Glow Liquid Filter",
+    "slug": "elf-halo-glow-liquid-filter",
+    "category": "makeup",
+    "price": "\u00c2\u00a315",
+    "rating": 4.6,
+    "reviews": 389,
+    "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=600&auto=format&fit=crop",
+    "tag": "Best Value Dupe",
+    "description": "A multi-purpose, liquid glow booster infused with skin-loving ingredients like squalane and hyaluronic acid. Creates a soft-focus social filter effect in real life.",
+    "metrics": {
+      "Hydration": 85,
+      "Longevity": 80,
+      "Texture": 88,
+      "Value": 98
+    },
+    "link": "https://www.elfcosmetics.co.uk",
+    "ingredients": [
+      "Aqua",
+      "Squalane",
+      "Glycerin",
+      "Hyaluronic Acid",
+      "Phenoxyethanol"
+    ],
+    "review_detail": "<h2>e.l.f. Halo Glow: The Ultimate Affordable Luminizer</h2><p>At just \u00c2\u00a315, e.l.f.'s Halo Glow Liquid Filter has taken the beauty industry by storm as a direct challenger to luxury glow boosters. Infused with squalane and hyaluronic acid, it delivers a sheer, luminous finish that can be worn alone, under foundation, or mixed with moisturizer.</p><h3>Why it's a 94% Dupe</h3><p>We compared the ingredient listings and finish side-by-side. The coverage is slightly sheerer than luxury alternatives, but the glow payoff is nearly identical. It binds beautifully to dry and normal skin types without feeling greasy.</p><h3>Our Verdict</h3><p>A must-have budget hero. It offers premium results for a fraction of the cost, making it our top-rated value recommendation.",
+    "is_featured": true
+  },
+  {
+    "id": 3,
+    "brand": "Clinique",
+    "name": "Moisture Surge 100H Hydrator",
+    "slug": "clinique-moisture-surge-100h",
+    "category": "skincare",
+    "price": "\u00c2\u00a342",
+    "rating": 4.7,
+    "reviews": 215,
+    "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop",
+    "tag": "Highly Rated",
+    "description": "An oil-free gel-cream moisturizer with exclusive aloe bio-ferment and hyaluronic acid that penetrates deep into skin's surface for hydration that lasts 100 hours.",
+    "metrics": {
+      "Hydration": 98,
+      "Longevity": 90,
+      "Texture": 95,
+      "Value": 75
+    },
+    "link": "https://www.clinique.co.uk",
+    "ingredients": [
+      "Aqua",
+      "Aloe Bio-Ferment",
+      "Hyaluronic Acid",
+      "Glycerin",
+      "Green Tea Extract"
+    ],
+    "review_detail": "<h2>Clinique Moisture Surge 100H Deep Dive Review</h2><p>Clinique's gel-cream hydrator is a cult favorite for oil-free moisture. It has a lightweight, whipped texture that sinks into the skin instantly, making it perfect for oily, combination, and sensitive skin types.</p><h3>Science and Ingredient Breakdown</h3><p>Combining Aloe Bio-Ferment and Hyaluronic Acid, this formula locks in hydration without blocking pores. The inclusion of green tea extract provides antioxidant benefits to calm irritated skin.</p><h3>Our Verdict</h3><p>An exceptional gel hydrator that provides intense moisture without heaviness. Perfect for warm weather or oily skin types.",
+    "is_featured": true
+  },
+  {
+    "id": 4,
+    "brand": "The Ordinary",
+    "name": "Niacinamide 10% + Zinc 1%",
+    "slug": "the-ordinary-niacinamide-10-zinc-1",
+    "category": "clean",
+    "price": "\u00c2\u00a36",
+    "rating": 4.5,
+    "reviews": 1204,
+    "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=600&auto=format&fit=crop",
+    "tag": "Ingredient Focus",
+    "description": "A high-strength vitamin and mineral blemish formula targets breakouts, minimizes pores, and regulates sebum activity. Vegan, cruelty-free, and oil-free.",
+    "metrics": {
+      "Hydration": 60,
+      "Longevity": 80,
+      "Texture": 75,
+      "Value": 99
+    },
+    "link": "https://theordinary.com",
+    "ingredients": [
+      "Aqua",
+      "Niacinamide",
+      "Zinc PCA",
+      "Phenoxyethanol",
+      "Tamarindus Indica Seed Gum"
+    ],
+    "review_detail": "<h2>The Ordinary Niacinamide: Simple and Effective Acne Care</h2><p>The Ordinary is famous for stripped-back, science-led skincare. This 10% Niacinamide serum targets sebum production and minimizes pores for under \u00c2\u00a36. It is vegan, cruelty-free, and contains no unnecessary fillers.</p><h3>Ingredient Benefits</h3><p>Niacinamide (Vitamin B3) reduces blemishes and brightens skin tone, while Zinc PCA balances sebum activity. It has a slightly tacky texture upon initial application but absorbs within minutes.</p><h3>Our Verdict</h3><p>An unbeatable value serum for blemish control. If you have sensitive skin, consider diluting or starting with a lower concentration, as 10% niacinamide is highly active.",
+    "is_featured": false
+  },
+  {
+    "id": 5,
+    "brand": "Est\u00c3\u00a9e Lauder",
+    "name": "Advanced Night Repair Serum",
+    "slug": "estee-lauder-advanced-night-repair",
+    "category": "skincare",
+    "price": "\u00c2\u00a389",
+    "rating": 4.9,
+    "reviews": 512,
+    "image": "https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=600&auto=format&fit=crop",
+    "tag": "Best Seller",
+    "description": "A patented deep-penetrating serum that reduces the appearance of multiple signs of aging. Skin feels smoother, more hydrated, and looks younger and radiant.",
+    "metrics": {
+      "Hydration": 92,
+      "Longevity": 95,
+      "Texture": 88,
+      "Value": 65
+    },
+    "link": "https://www.esteelauder.co.uk",
+    "ingredients": [
+      "Aqua",
+      "Bifida Ferment Lysate",
+      "Hyaluronic Acid",
+      "Squalane",
+      "Glycerin"
+    ],
+    "review_detail": "<h2>Advanced Night Repair: Is it Worth the \u00c2\u00a389 Price Tag?</h2><p>Est\u00c3\u00a9e Lauder's Advanced Night Repair is one of the most famous serums in history. It targets dry skin, fine lines, and skin barrier repair overnight. After extensive testing, we can confirm the skin feels noticeably smoother and more hydrated by morning.</p><h3>Key Active Ingredients</h3><p>Bifida Ferment Lysate is the primary ingredient, which is a probiotic that helps strengthen the skin microbiome. Squalane and Hyaluronic Acid add deep moisture binding.</p><h3>Our Verdict</h3><p>While expensive, its skin-smoothing results are unmatched. Highly recommended for mature or dry skin types looking for premium anti-aging care.",
+    "is_featured": true
+  },
+  {
+    "id": 6,
+    "brand": "MAC Cosmetics",
+    "name": "Studio Fix Fluid SPF 15",
+    "slug": "mac-studio-fix-fluid-spf-15",
+    "category": "makeup",
+    "price": "\u00c2\u00a336",
+    "rating": 4.7,
+    "reviews": 443,
+    "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600&auto=format&fit=crop",
+    "tag": "Pro Favorite",
+    "description": "An oil-controlling formula that offers a natural-matte finish with medium-to-full buildable coverage. Long-wearing for 24 hours. Resists sweat and humidity.",
+    "metrics": {
+      "Hydration": 50,
+      "Longevity": 98,
+      "Texture": 85,
+      "Value": 80
+    },
+    "link": "https://www.maccosmetics.co.uk",
+    "ingredients": [
+      "Aqua",
+      "Cyclopentasiloxane",
+      "Silica",
+      "Glycerin",
+      "Phenoxyethanol"
+    ],
+    "review_detail": "<h2>MAC Studio Fix Fluid: The Matte Coverage Standard</h2><p>MAC's Studio Fix Fluid has been a makeup kit standard for years. It delivers buildable medium-to-full coverage with a natural matte finish that controls shine all day.</p><h3>Longevity & Finish</h3><p>This oil-free foundation holds up exceptionally well against sweat, humidity, and active days. Its texture is fluid but drying, so it is recommended to moisturize deeply beforehand if you have dry patches.</p><h3>Our Verdict</h3><p>The absolute gold standard for full-coverage matte finish. Ideal for oily, combination, or normal skin types.",
+    "is_featured": false
+  },
+  {
+    "brand": "The Ordinary",
+    "name": "Hyaluronic Acid 2% + B5",
+    "slug": "the-ordinary-hyaluronic-acid-2-b5",
+    "category": "clean",
+    "price": "\u00a38",
+    "rating": 4.6,
+    "reviews": 894,
+    "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop",
+    "tag": "Hydration Hero",
+    "description": "A hydration-support formula with ultra-pure, vegan hyaluronic acid. Delivers multi-depth hydration and visible plumping without drawing water out of the skin.",
+    "metrics": {
+      "Hydration": 97,
+      "Longevity": 75,
+      "Texture": 80,
+      "Value": 99
+    },
+    "link": "https://theordinary.com",
+    "ingredients": [
+      "Aqua",
+      "Hyaluronic Acid",
+      "Panthenol (Vitamin B5)",
+      "Phenoxyethanol"
+    ],
+    "is_featured": false,
+    "review_detail": "\n    <h2>An Honest Review of The Ordinary's Hyaluronic Acid 2% + B5</h2>\n    <p>We tested The Ordinary's Hyaluronic Acid 2% + B5 for over three weeks. The formula stands out immediately for its refined texture and clean absorption, leaving the skin feeling remarkably balanced. Under daily wear, it holds up beautifully under makeup or as a standalone care step.</p>\n    <h3>Formula & Key Ingredients</h3>\n    <p>This product utilizes high-standard active ingredients, primarily focusing on <strong>Aqua, Hyaluronic Acid, Panthenol (Vitamin B5)</strong>. These work in synergy to restore moisture levels, protect the skin barrier, and deliver visible results without cause for irritation.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of \u00a38, this offers exceptional quality and holds standard-setting performance values in the clean market. It is highly recommended for anyone looking to optimize their daily routine.</p>\n    ",
+    "id": 7
+  },
+  {
+    "brand": "Dior",
+    "name": "Addict Lip Glow Oil",
+    "slug": "dior-addict-lip-glow-oil",
+    "category": "makeup",
+    "price": "\u00a332",
+    "rating": 4.8,
+    "reviews": 731,
+    "image": "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?q=80&w=600&auto=format&fit=crop",
+    "tag": "Viral Classic",
+    "description": "A nourishing glossy lip oil that deeply protects and enhances the lips, bringing out their natural color with a sheer, mirror-like shine.",
+    "metrics": {
+      "Hydration": 92,
+      "Longevity": 78,
+      "Texture": 95,
+      "Value": 72
+    },
+    "link": "https://www.dior.com",
+    "ingredients": [
+      "Cherry Oil",
+      "Squalane",
+      "Glycerin",
+      "Tocopherol",
+      "Phenoxyethanol"
+    ],
+    "is_featured": true,
+    "review_detail": "\n    <h2>An Honest Review of Dior's Addict Lip Glow Oil</h2>\n    <p>We tested Dior's Addict Lip Glow Oil for over three weeks. The formula stands out immediately for its refined texture and clean absorption, leaving the skin feeling remarkably balanced. Under daily wear, it holds up beautifully under makeup or as a standalone care step.</p>\n    <h3>Formula & Key Ingredients</h3>\n    <p>This product utilizes high-standard active ingredients, primarily focusing on <strong>Cherry Oil, Squalane, Glycerin</strong>. These work in synergy to restore moisture levels, protect the skin barrier, and deliver visible results without cause for irritation.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of \u00a332, this offers exceptional quality and holds standard-setting performance values in the makeup market. It is highly recommended for anyone looking to optimize their daily routine.</p>\n    ",
+    "id": 8
+  }
+]
