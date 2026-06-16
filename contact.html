@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact GlowVault Direct - Get in touch with our editorial and support team.">
+  <title>Contact Us | GlowVault Direct</title>
+  
+  <!-- Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    .contact-form-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .contact-form-group label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      color: var(--color-text-dark);
+    }
+    .contact-form-group input, 
+    .contact-form-group textarea {
+      padding: 12px 16px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      background-color: var(--bg-primary);
+      color: var(--color-text-dark);
+      transition: var(--transition-smooth);
+    }
+    .contact-form-group input:focus, 
+    .contact-form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-rose-gold);
+      background-color: #FFF;
+      box-shadow: 0 0 10px rgba(197, 160, 131, 0.1);
+    }
+  </style>
+</head>
+<body class="editorial-page">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">GLOW<span>VAULT</span></a>
+      <ul class="nav-links">
+        <li><a href="/#shelf">Beauty Shelf</a></li>
+        <li><a href="/#dupes">Dupe Matrix</a></li>
+        <li><a href="/#quiz">Skin Quiz</a></li>
+        <li><a href="/#decoder">Ingredient Decoder</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="/" class="btn btn-outline nav-btn">Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Title Header -->
+  <header style="padding-top: 140px; padding-bottom: 40px; background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); text-align: center;">
+    <div class="container">
+      <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-rose-gold); font-weight: 600;">Get In Touch</span>
+      <h1 style="font-size: 3rem; margin-top: 10px; margin-bottom: 20px;">Contact Us</h1>
+      <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">Have editorial requests, brand partnership inquiries, or general feedback? Send us a message.</p>
+    </div>
+  </header>
+
+  <!-- Form Section -->
+  <section class="section" style="background-color: var(--bg-secondary); padding: 60px 0;">
+    <div class="container" style="max-width: 600px;">
+      <div class="glass-panel" style="padding: 40px; border-radius: var(--radius-md);">
+        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+          
+          <div class="contact-form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="contact-form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email address" required>
+          </div>
+          
+          <div class="contact-form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="What is this regarding?" required>
+          </div>
+          
+          <div class="contact-form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="6" placeholder="Write your message here..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; margin-top: 10px;">Send Message</button>
+        </form>
+        
+        <div id="contact-success" style="display: none; text-align: center; padding: 20px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-rose-gold)" stroke-width="2" style="width: 48px; height: 48px; margin: 0 auto 15px;">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Message Sent!</h3>
+          <p>Thank you for reaching out. A member of the GlowVault Direct editorial team will respond to your inquiry within 48 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>GLOW<span>VAULT</span></h3>
+          <p>Stunning £0 budget affiliate platform built with next-gen AIO optimization. Linking consumers to verified original manufacturers.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform Navigation</h4>
+          <ul>
+            <li><a href="/#shelf">Beauty Shelf</a></li>
+            <li><a href="/#dupes">Dupe Finder</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/privacy.html">Privacy & Disclosure</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GlowVault Direct. All products are affiliate-linked directly to official manufacturers. 100% original product authenticity guaranteed.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      document.getElementById("contact-form").style.display = "none";
+      document.getElementById("contact-success").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
