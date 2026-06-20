@@ -223,6 +223,17 @@ p {
   padding: 0 20px;
   background: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .hero-bg-overlay {
@@ -372,11 +383,37 @@ p {
   border-color: var(--color-rose-gold);
 }
 
-/* Product Cards Grid */
+/* Product Cards Grid - Staggered Art Gallery Layout */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .product-card:nth-child(even) {
+    transform: translateY(30px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+  .product-card:nth-child(3n+2) {
+    transform: translateY(30px);
+  }
+  .product-card:nth-child(3n) {
+    transform: translateY(60px);
+  }
+  .shelf-section {
+    padding-bottom: 160px; /* Offset spacing for stagger card heights */
+  }
 }
 
 .product-card {
@@ -385,20 +422,46 @@ p {
   overflow: hidden;
   box-shadow: var(--shadow-luxe);
   border: 1px solid var(--border-light);
-  transition: var(--transition-smooth);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
   display: flex;
   flex-direction: column;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(197, 160, 131, 0.25);
+  box-shadow: 0 20px 40px rgba(197, 160, 131, 0.35);
+}
+
+@media (min-width: 1024px) {
+  .product-card:nth-child(3n+1):hover {
+    transform: translateY(-10px);
+  }
+  .product-card:nth-child(3n+2):hover {
+    transform: translateY(20px);
+  }
+  .product-card:nth-child(3n):hover {
+    transform: translateY(50px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .product-card:nth-child(odd):hover {
+    transform: translateY(-10px);
+  }
+  .product-card:nth-child(even):hover {
+    transform: translateY(20px);
+  }
+}
+
+@media (max-width: 767px) {
+  .product-card:hover {
+    transform: translateY(-8px);
+  }
 }
 
 .product-card-img {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 280px;
   overflow: hidden;
 }
 
@@ -406,11 +469,33 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition-smooth);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .product-card:hover .product-card-img img {
-  transform: scale(1.05);
+  transform: scale(1.06);
+}
+
+/* Luxury card hover shimmer sweep */
+.product-card-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: 0.75s;
+}
+
+.product-card:hover .product-card-img::after {
+  left: 150%;
 }
 
 .product-tag {
