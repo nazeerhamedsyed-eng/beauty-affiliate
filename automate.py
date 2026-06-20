@@ -262,6 +262,51 @@ def draw_pinterest_pin(product):
     im.save(out_path)
     logger.info(f"Pinterest graphic saved to {out_path}")
 
+def generate_sitemap(products):
+    """
+    Generates a standard sitemap.xml file listing all static URLs
+    so that Google Search Console can index them immediately.
+    """
+    logger.info("Generating sitemap.xml...")
+    base_url = "https://glowvaultdirect.com"
+    
+    # Core static pages
+    urls = [
+        {"loc": f"{base_url}/", "changefreq": "daily", "priority": "1.0"},
+        {"loc": f"{base_url}/about.html", "changefreq": "weekly", "priority": "0.8"},
+        {"loc": f"{base_url}/contact.html", "changefreq": "monthly", "priority": "0.8"},
+        {"loc": f"{base_url}/privacy.html", "changefreq": "monthly", "priority": "0.8"},
+        {"loc": f"{base_url}/cookies.html", "changefreq": "monthly", "priority": "0.8"},
+        {"loc": f"{base_url}/terms.html", "changefreq": "monthly", "priority": "0.8"},
+    ]
+    
+    # Dynamic product pages
+    for p in products:
+        urls.append({
+            "loc": f"{base_url}/products/{p['slug']}.html",
+            "changefreq": "weekly",
+            "priority": "0.9"
+        })
+        
+    # Build XML string
+    xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    
+    for url in urls:
+        xml_content += '  <url>\n'
+        xml_content += f'    <loc>{url["loc"]}</loc>\n'
+        xml_content += f'    <changefreq>{url["changefreq"]}</changefreq>\n'
+        xml_content += f'    <priority>{url["priority"]}</priority>\n'
+        xml_content += '  </url>\n'
+        
+    xml_content += '</urlset>\n'
+    
+    sitemap_path = os.path.join(WORKSPACE_DIR, "sitemap.xml")
+    with open(sitemap_path, "w", encoding="utf-8") as f:
+        f.write(xml_content)
+        
+    logger.info(f"Sitemap successfully generated at {sitemap_path}")
+
 def build_static_website():
     """
     Compiles index-template.html -> index.html
@@ -300,6 +345,9 @@ def build_static_website():
             f.write(prod_output)
             
     logger.info("All programmatic product detail pages successfully compiled.")
+    
+    # 3. Generate Sitemap
+    generate_sitemap(products)
 
 def main():
     logger.info("Starting Autonomous Affiliate Engine cycle...")
