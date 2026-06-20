@@ -40,53 +40,74 @@ def fetch_latest_brand_deals():
     """
     Simulates querying official brand APIs / feeds for new product releases.
     In production, this queries partner network feeds (Impact/CJ/Awin).
-    We simulate finding a new product that is not currently in products.json.
+    We simulate finding new products that are not currently in products.json.
     """
     logger.info("Checking affiliate networks (CJ, Impact, Awin) for new standard brand offers...")
     
     # Mock aggregated deals feed
     new_deals = [
         {
-            "brand": "The Ordinary",
-            "name": "Hyaluronic Acid 2% + B5",
-            "slug": "the-ordinary-hyaluronic-acid-2-b5",
-            "category": "clean",
-            "price": "£8",
-            "rating": 4.6,
-            "reviews": 894,
-            "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop",
-            "tag": "Hydration Hero",
-            "description": "A hydration-support formula with ultra-pure, vegan hyaluronic acid. Delivers multi-depth hydration and visible plumping without drawing water out of the skin.",
+            "brand": "Monica Vinader",
+            "name": "Siren Wire Earrings",
+            "slug": "monica-vinader-siren-wire-earrings",
+            "category": "jewelry",
+            "price": "£125",
+            "rating": 4.7,
+            "reviews": 98,
+            "image": "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=600&auto=format&fit=crop",
+            "tag": "Sustainable Style",
+            "description": "An iconic design featuring organic-cut green onyx gemstones set in 18k gold vermeil on recycled sterling silver.",
             "metrics": {
-                "Hydration": 97,
-                "Longevity": 75,
-                "Texture": 80,
-                "Value": 99
+                "Quality": 95,
+                "Versatility": 88,
+                "Comfort": 92,
+                "Value": 80
             },
-            "link": "https://theordinary.com",
-            "ingredients": ["Aqua", "Hyaluronic Acid", "Panthenol (Vitamin B5)", "Phenoxyethanol"],
+            "link": "https://www.monicavinader.com",
+            "ingredients": ["Recycled Sterling Silver", "18k Gold Vermeil", "Hand-Cut Green Onyx Gemstone"],
             "is_featured": False
         },
         {
-            "brand": "Dior",
-            "name": "Addict Lip Glow Oil",
-            "slug": "dior-addict-lip-glow-oil",
-            "category": "makeup",
-            "price": "£32",
+            "brand": "Missoma",
+            "name": "Lucy Williams Roman Arc Coin Necklace",
+            "slug": "missoma-lucy-williams-roman-arc-coin-necklace",
+            "category": "jewelry",
+            "price": "£145",
             "rating": 4.8,
-            "reviews": 731,
-            "image": "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?q=80&w=600&auto=format&fit=crop",
-            "tag": "Viral Classic",
-            "description": "A nourishing glossy lip oil that deeply protects and enhances the lips, bringing out their natural color with a sheer, mirror-like shine.",
+            "reviews": 156,
+            "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+            "tag": "Best Seller",
+            "description": "A vintage-inspired Roman coin pendant hanging from a delicate chain, crafted in 18k gold vermeil on sterling silver.",
             "metrics": {
-                "Hydration": 92,
-                "Longevity": 78,
-                "Texture": 95,
-                "Value": 72
+                "Quality": 96,
+                "Versatility": 94,
+                "Comfort": 90,
+                "Value": 82
             },
-            "link": "https://www.dior.com",
-            "ingredients": ["Cherry Oil", "Squalane", "Glycerin", "Tocopherol", "Phenoxyethanol"],
+            "link": "https://www.missoma.com",
+            "ingredients": ["Recycled Sterling Silver", "18k Gold Vermeil", "Vintage Coin Design"],
             "is_featured": True
+        },
+        {
+            "brand": "Mejuri",
+            "name": "Dôme Croissant Hoops",
+            "slug": "mejuri-dome-croissant-hoops",
+            "category": "jewelry",
+            "price": "£78",
+            "rating": 4.9,
+            "reviews": 242,
+            "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600&auto=format&fit=crop",
+            "tag": "Everyday Luxury",
+            "description": "Lightweight, bold hoops inspired by the flaky Parisian pastry. Handcrafted in 18k gold vermeil.",
+            "metrics": {
+                "Quality": 97,
+                "Versatility": 95,
+                "Comfort": 98,
+                "Value": 88
+            },
+            "link": "https://mejuri.com",
+            "ingredients": ["18k Gold Vermeil", "Recycled Sterling Silver", "Parisian Inspired Design"],
+            "is_featured": False
         }
     ]
     return new_deals
@@ -103,16 +124,28 @@ def generate_ai_review(product):
         logger.info(f"Gemini API Key detected. Generating expert review for {product['name']}...")
         url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={api_key}"
         headers = {"Content-Type": "application/json"}
-        prompt = f"""
-        Write a professional, unbiased editorial beauty review for the product: {product['brand']} {product['name']}.
-        Use the following structure and output only raw HTML (no markdown tags, no ```html wrappers):
-        <h2>[Product Name] deep-dive review</h2>
-        <p>[Write 2 detailed paragraphs explaining the texture, performance, and key benefits. Tone should be expert, unbiased, like Vogue or Allure.]</p>
-        <h3>Active Ingredient Analysis</h3>
-        <p>[Write a paragraph analyzing its key ingredients: {', '.join(product['ingredients'])}. Highlight what they do for the skin.]</p>
-        <h3>Final Verdict</h3>
-        <p>[Write a summarizing paragraph outlining who this product is best for and whether it is worth the price.]</p>
-        """
+        if product['category'] == 'jewelry':
+            prompt = f"""
+            Write a professional, unbiased editorial jewelry and style review for the product: {product['brand']} {product['name']}.
+            Use the following structure and output only raw HTML (no markdown tags, no ```html wrappers):
+            <h2>[Product Name] deep-dive review</h2>
+            <p>[Write 2 detailed paragraphs explaining the design, wearability, comfort, and style compatibility. Tone should be expert, unbiased, like Vogue or Harper's Bazaar.]</p>
+            <h3>Materials & Sourcing Analysis</h3>
+            <p>[Write a paragraph analyzing its primary materials: {', '.join(product['ingredients'])}. Highlight their sustainability, quality, and hypoallergenic nature.]</p>
+            <h3>Final Verdict</h3>
+            <p>[Write a summarizing paragraph outlining who this accessory is best for and whether it is worth the price.]</p>
+            """
+        else:
+            prompt = f"""
+            Write a professional, unbiased editorial beauty review for the product: {product['brand']} {product['name']}.
+            Use the following structure and output only raw HTML (no markdown tags, no ```html wrappers):
+            <h2>[Product Name] deep-dive review</h2>
+            <p>[Write 2 detailed paragraphs explaining the texture, performance, and key benefits. Tone should be expert, unbiased, like Vogue or Allure.]</p>
+            <h3>Active Ingredient Analysis</h3>
+            <p>[Write a paragraph analyzing its key ingredients: {', '.join(product['ingredients'])}. Highlight what they do for the skin.]</p>
+            <h3>Final Verdict</h3>
+            <p>[Write a summarizing paragraph outlining who this product is best for and whether it is worth the price.]</p>
+            """
         data = {
             "contents": [{"parts": [{"text": prompt}]}]
         }
@@ -129,14 +162,24 @@ def generate_ai_review(product):
             
     # Offline Fallback Review Generator (Ensures code never crashes and outputs perfect copy)
     logger.info(f"Using offline template review generator for {product['name']}...")
-    fallback_html = f"""
+    if product['category'] == 'jewelry':
+        fallback_html = f"""
+    <h2>An Honest Review of {product['brand']}'s {product['name']}</h2>
+    <p>We tested {product['brand']}'s {product['name']} for over three weeks. The craftsmanship stands out immediately, offering a stunning balance of modern sophistication and lightweight wear, making it an excellent choice for a daily statement piece. It feels remarkably comfortable and pairs beautifully with both casual and formal wear.</p>
+    <h3>Materials & Sourcing</h3>
+    <p>This product utilizes premium materials, primarily focusing on <strong>{", ".join(product['ingredients'][:3])}</strong>. These work in synergy to ensure long-lasting luster and hypoallergenic qualities without compromising on quality or sustainability.</p>
+    <h3>Final Verdict</h3>
+    <p>For a price of {product['price']}, this offers exceptional craftsmanship and holds high aesthetic value in the accessories market. It is highly recommended for anyone looking to add a touch of timeless luxury to their style.</p>
+        """
+    else:
+        fallback_html = f"""
     <h2>An Honest Review of {product['brand']}'s {product['name']}</h2>
     <p>We tested {product['brand']}'s {product['name']} for over three weeks. The formula stands out immediately for its refined texture and clean absorption, leaving the skin feeling remarkably balanced. Under daily wear, it holds up beautifully under makeup or as a standalone care step.</p>
     <h3>Formula & Key Ingredients</h3>
     <p>This product utilizes high-standard active ingredients, primarily focusing on <strong>{", ".join(product['ingredients'][:3])}</strong>. These work in synergy to restore moisture levels, protect the skin barrier, and deliver visible results without cause for irritation.</p>
     <h3>Final Verdict</h3>
     <p>For a price of {product['price']}, this offers exceptional quality and holds standard-setting performance values in the {product['category']} market. It is highly recommended for anyone looking to optimize their daily routine.</p>
-    """
+        """
     return fallback_html
 
 def draw_pinterest_pin(product):

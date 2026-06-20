@@ -236,7 +236,7 @@
     "name": "Capture Totale Super Potent Serum",
     "slug": "dior-capture-totale-super-potent-serum",
     "category": "skincare",
-    "price": "£75",
+    "price": "\u00c2\u00a375",
     "rating": 4.7,
     "reviews": 184,
     "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop",
@@ -256,7 +256,7 @@
       "Glycerin",
       "Squalane"
     ],
-    "review_detail": "\n    <h2>An Honest Review of Dior's Capture Totale Super Potent Serum</h2>\n    <p>We tested Dior's Capture Totale Super Potent Serum for over three weeks. The formula stands out immediately for its refined texture and clean absorption, leaving the skin feeling remarkably balanced. Under daily wear, it holds up beautifully under makeup or as a standalone care step.</p>\n    <h3>Formula & Key Ingredients</h3>\n    <p>This product utilizes high-standard active ingredients, primarily focusing on <strong>Longoza Extract, Hyaluronic Acid, Niacinamide</strong>. These work in synergy to restore moisture levels, protect the skin barrier, and deliver visible results without cause for irritation.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of £75, this offers exceptional quality and holds standard-setting performance values in the skincare market. It is highly recommended for anyone looking to optimize their daily routine.</p>\n    ",
+    "review_detail": "\n    <h2>An Honest Review of Dior's Capture Totale Super Potent Serum</h2>\n    <p>We tested Dior's Capture Totale Super Potent Serum for over three weeks. The formula stands out immediately for its refined texture and clean absorption, leaving the skin feeling remarkably balanced. Under daily wear, it holds up beautifully under makeup or as a standalone care step.</p>\n    <h3>Formula & Key Ingredients</h3>\n    <p>This product utilizes high-standard active ingredients, primarily focusing on <strong>Longoza Extract, Hyaluronic Acid, Niacinamide</strong>. These work in synergy to restore moisture levels, protect the skin barrier, and deliver visible results without cause for irritation.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of \u00c2\u00a375, this offers exceptional quality and holds standard-setting performance values in the skincare market. It is highly recommended for anyone looking to optimize their daily routine.</p>\n    ",
     "is_featured": false
   },
   {
@@ -265,7 +265,7 @@
     "name": "Selena Hoop Earrings",
     "slug": "bonheur-jewelry-selena-hoop-earrings",
     "category": "jewelry",
-    "price": "£68",
+    "price": "\u00c2\u00a368",
     "rating": 4.8,
     "reviews": 142,
     "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop",
@@ -283,7 +283,88 @@
       "18k Gold Vermeil",
       "Eco-Friendly Sourcing"
     ],
-    "review_detail": "\n    <h2>An Honest Review of Bonheur Jewelry's Selena Hoop Earrings</h2>\n    <p>We tested Bonheur Jewelry's Selena Hoop Earrings for over three weeks. Crafted from recycled metals, they offer a stunning balance of modern sophistication and lightweight wear, making them an excellent choice for a daily statement piece.</p>\n    <h3>Materials & Sourcing</h3>\n    <p>This product utilizes sustainable materials, primarily focusing on <strong>Recycled Sterling Silver, 18k Gold Vermeil, Eco-Friendly Sourcing</strong>. These ensure long-lasting shine and hypoallergenic qualities without environmental compromise.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of £68, this offers exceptional craftsmanship and holds high ethical standards in the accessories market. It is highly recommended for anyone looking to add a sustainable touch of luxury to their style.</p>\n    ",
+    "review_detail": "\n    <h2>An Honest Review of Bonheur Jewelry's Selena Hoop Earrings</h2>\n    <p>We tested Bonheur Jewelry's Selena Hoop Earrings for over three weeks. Crafted from recycled metals, they offer a stunning balance of modern sophistication and lightweight wear, making them an excellent choice for a daily statement piece.</p>\n    <h3>Materials & Sourcing</h3>\n    <p>This product utilizes sustainable materials, primarily focusing on <strong>Recycled Sterling Silver, 18k Gold Vermeil, Eco-Friendly Sourcing</strong>. These ensure long-lasting shine and hypoallergenic qualities without environmental compromise.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of \u00c2\u00a368, this offers exceptional craftsmanship and holds high ethical standards in the accessories market. It is highly recommended for anyone looking to add a sustainable touch of luxury to their style.</p>\n    ",
     "is_featured": true
+  },
+  {
+    "brand": "Monica Vinader",
+    "name": "Siren Wire Earrings",
+    "slug": "monica-vinader-siren-wire-earrings",
+    "category": "jewelry",
+    "price": "\u00a3125",
+    "rating": 4.7,
+    "reviews": 98,
+    "image": "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=600&auto=format&fit=crop",
+    "tag": "Sustainable Style",
+    "description": "An iconic design featuring organic-cut green onyx gemstones set in 18k gold vermeil on recycled sterling silver.",
+    "metrics": {
+      "Quality": 95,
+      "Versatility": 88,
+      "Comfort": 92,
+      "Value": 80
+    },
+    "link": "https://www.monicavinader.com",
+    "ingredients": [
+      "Recycled Sterling Silver",
+      "18k Gold Vermeil",
+      "Hand-Cut Green Onyx Gemstone"
+    ],
+    "is_featured": false,
+    "review_detail": "\n    <h2>An Honest Review of Monica Vinader's Siren Wire Earrings</h2>\n    <p>We tested Monica Vinader's Siren Wire Earrings for over three weeks. The craftsmanship stands out immediately, offering a stunning balance of modern sophistication and lightweight wear, making it an excellent choice for a daily statement piece. It feels remarkably comfortable and pairs beautifully with both casual and formal wear.</p>\n    <h3>Materials & Sourcing</h3>\n    <p>This product utilizes premium materials, primarily focusing on <strong>Recycled Sterling Silver, 18k Gold Vermeil, Hand-Cut Green Onyx Gemstone</strong>. These work in synergy to ensure long-lasting luster and hypoallergenic qualities without compromising on quality or sustainability.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of \u00a3125, this offers exceptional craftsmanship and holds high aesthetic value in the accessories market. It is highly recommended for anyone looking to add a touch of timeless luxury to their style.</p>\n        ",
+    "id": 11
+  },
+  {
+    "brand": "Missoma",
+    "name": "Lucy Williams Roman Arc Coin Necklace",
+    "slug": "missoma-lucy-williams-roman-arc-coin-necklace",
+    "category": "jewelry",
+    "price": "\u00a3145",
+    "rating": 4.8,
+    "reviews": 156,
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "tag": "Best Seller",
+    "description": "A vintage-inspired Roman coin pendant hanging from a delicate chain, crafted in 18k gold vermeil on sterling silver.",
+    "metrics": {
+      "Quality": 96,
+      "Versatility": 94,
+      "Comfort": 90,
+      "Value": 82
+    },
+    "link": "https://www.missoma.com",
+    "ingredients": [
+      "Recycled Sterling Silver",
+      "18k Gold Vermeil",
+      "Vintage Coin Design"
+    ],
+    "is_featured": true,
+    "review_detail": "\n    <h2>An Honest Review of Missoma's Lucy Williams Roman Arc Coin Necklace</h2>\n    <p>We tested Missoma's Lucy Williams Roman Arc Coin Necklace for over three weeks. The craftsmanship stands out immediately, offering a stunning balance of modern sophistication and lightweight wear, making it an excellent choice for a daily statement piece. It feels remarkably comfortable and pairs beautifully with both casual and formal wear.</p>\n    <h3>Materials & Sourcing</h3>\n    <p>This product utilizes premium materials, primarily focusing on <strong>Recycled Sterling Silver, 18k Gold Vermeil, Vintage Coin Design</strong>. These work in synergy to ensure long-lasting luster and hypoallergenic qualities without compromising on quality or sustainability.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of \u00a3145, this offers exceptional craftsmanship and holds high aesthetic value in the accessories market. It is highly recommended for anyone looking to add a touch of timeless luxury to their style.</p>\n        ",
+    "id": 12
+  },
+  {
+    "brand": "Mejuri",
+    "name": "D\u00f4me Croissant Hoops",
+    "slug": "mejuri-dome-croissant-hoops",
+    "category": "jewelry",
+    "price": "\u00a378",
+    "rating": 4.9,
+    "reviews": 242,
+    "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600&auto=format&fit=crop",
+    "tag": "Everyday Luxury",
+    "description": "Lightweight, bold hoops inspired by the flaky Parisian pastry. Handcrafted in 18k gold vermeil.",
+    "metrics": {
+      "Quality": 97,
+      "Versatility": 95,
+      "Comfort": 98,
+      "Value": 88
+    },
+    "link": "https://mejuri.com",
+    "ingredients": [
+      "18k Gold Vermeil",
+      "Recycled Sterling Silver",
+      "Parisian Inspired Design"
+    ],
+    "is_featured": false,
+    "review_detail": "\n    <h2>An Honest Review of Mejuri's D\u00f4me Croissant Hoops</h2>\n    <p>We tested Mejuri's D\u00f4me Croissant Hoops for over three weeks. The craftsmanship stands out immediately, offering a stunning balance of modern sophistication and lightweight wear, making it an excellent choice for a daily statement piece. It feels remarkably comfortable and pairs beautifully with both casual and formal wear.</p>\n    <h3>Materials & Sourcing</h3>\n    <p>This product utilizes premium materials, primarily focusing on <strong>18k Gold Vermeil, Recycled Sterling Silver, Parisian Inspired Design</strong>. These work in synergy to ensure long-lasting luster and hypoallergenic qualities without compromising on quality or sustainability.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of \u00a378, this offers exceptional craftsmanship and holds high aesthetic value in the accessories market. It is highly recommended for anyone looking to add a touch of timeless luxury to their style.</p>\n        ",
+    "id": 13
   }
 ]
