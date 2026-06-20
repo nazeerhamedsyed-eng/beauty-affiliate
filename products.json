@@ -258,5 +258,32 @@
     ],
     "review_detail": "\n    <h2>An Honest Review of Dior's Capture Totale Super Potent Serum</h2>\n    <p>We tested Dior's Capture Totale Super Potent Serum for over three weeks. The formula stands out immediately for its refined texture and clean absorption, leaving the skin feeling remarkably balanced. Under daily wear, it holds up beautifully under makeup or as a standalone care step.</p>\n    <h3>Formula & Key Ingredients</h3>\n    <p>This product utilizes high-standard active ingredients, primarily focusing on <strong>Longoza Extract, Hyaluronic Acid, Niacinamide</strong>. These work in synergy to restore moisture levels, protect the skin barrier, and deliver visible results without cause for irritation.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of £75, this offers exceptional quality and holds standard-setting performance values in the skincare market. It is highly recommended for anyone looking to optimize their daily routine.</p>\n    ",
     "is_featured": false
+  },
+  {
+    "id": 10,
+    "brand": "Bonheur Jewelry",
+    "name": "Selena Hoop Earrings",
+    "slug": "bonheur-jewelry-selena-hoop-earrings",
+    "category": "jewelry",
+    "price": "£68",
+    "rating": 4.8,
+    "reviews": 142,
+    "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=600&auto=format&fit=crop",
+    "tag": "Celebrity Favorite",
+    "description": "Elegant, eco-friendly hoop earrings crafted in recycled gold vermeil. A modern classic designed for effortless daily wear.",
+    "metrics": {
+      "Quality": 96,
+      "Versatility": 90,
+      "Comfort": 95,
+      "Value": 85
+    },
+    "link": "https://bonheurjewelry.com",
+    "ingredients": [
+      "Recycled Sterling Silver",
+      "18k Gold Vermeil",
+      "Eco-Friendly Sourcing"
+    ],
+    "review_detail": "\n    <h2>An Honest Review of Bonheur Jewelry's Selena Hoop Earrings</h2>\n    <p>We tested Bonheur Jewelry's Selena Hoop Earrings for over three weeks. Crafted from recycled metals, they offer a stunning balance of modern sophistication and lightweight wear, making them an excellent choice for a daily statement piece.</p>\n    <h3>Materials & Sourcing</h3>\n    <p>This product utilizes sustainable materials, primarily focusing on <strong>Recycled Sterling Silver, 18k Gold Vermeil, Eco-Friendly Sourcing</strong>. These ensure long-lasting shine and hypoallergenic qualities without environmental compromise.</p>\n    <h3>Final Verdict</h3>\n    <p>For a price of £68, this offers exceptional craftsmanship and holds high ethical standards in the accessories market. It is highly recommended for anyone looking to add a sustainable touch of luxury to their style.</p>\n    ",
+    "is_featured": true
   }
 ]

@@ -188,8 +188,17 @@ def draw_pinterest_pin(product):
         draw.text((500, 470), line2, fill="#1E2022", font=font_title, anchor="ms")
         
     # Summary Quote / Hook
-    draw.text((500, 600), f"\"The ultimate {product['category']} formula,\"", fill="#C5A083", font=font_subtitle, anchor="ms")
-    draw.text((500, 660), f"reviewed honestly by skin experts.", fill="#62686E", font=font_body, anchor="ms")
+    if product['category'] == 'jewelry':
+        hook_line1 = f"\"The ultimate jewelry statement,\""
+        hook_line2 = "reviewed honestly by style experts."
+        badge_text = "READ FULL EDITORIAL REVIEW"
+    else:
+        hook_line1 = f"\"The ultimate {product['category']} formula,\""
+        hook_line2 = "reviewed honestly by skin experts."
+        badge_text = "READ FULL INGREDIENT BREAKDOWN"
+
+    draw.text((500, 600), hook_line1, fill="#C5A083", font=font_subtitle, anchor="ms")
+    draw.text((500, 660), hook_line2, fill="#62686E", font=font_body, anchor="ms")
     
     # Feature Badges
     draw.rectangle([150, 850, 480, 1050], fill="#FAF9F6", outline="#C5A083", width=1)
@@ -202,7 +211,7 @@ def draw_pinterest_pin(product):
 
     # Bottom Call to Action
     draw.rectangle([250, 1180, 750, 1280], fill="#C5A083")
-    draw.text((500, 1243), "READ FULL INGREDIENT BREAKDOWN", fill="#FFF", font=font_badge, anchor="ms")
+    draw.text((500, 1243), badge_text, fill="#FFF", font=font_badge, anchor="ms")
     draw.text((500, 1340), "glowvaultdirect.com", fill="#62686E", font=font_body, anchor="ms")
     
     # Save Image
