@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
   setupEventListeners();
   loadInitialChat();
+  loadPubSettings();
 });
 
 // DOM-Based Card Filtering
@@ -342,17 +343,89 @@ function decodeIngredients() {
 // Admin Link Helper Modal Logic
 function openAdminTool() {
   document.getElementById("admin-modal").style.display = "flex";
+  loadPubSettings();
 }
 
 function closeAdminTool() {
   document.getElementById("admin-modal").style.display = "none";
 }
 
+// LocalStorage Persistence
+function savePubSettings() {
+  const awinId = document.getElementById("pub-awin-id").value.trim();
+  const impactId = document.getElementById("pub-impact-id").value.trim();
+  localStorage.setItem("glowvault_pub_awin", awinId);
+  localStorage.setItem("glowvault_pub_impact", impactId);
+}
+
+function loadPubSettings() {
+  const awinId = localStorage.getItem("glowvault_pub_awin") || "";
+  const impactId = localStorage.getItem("glowvault_pub_impact") || "";
+  
+  const pubAwinInput = document.getElementById("pub-awin-id");
+  const pubImpactInput = document.getElementById("pub-impact-id");
+  
+  if (pubAwinInput) pubAwinInput.value = awinId;
+  if (pubImpactInput) pubImpactInput.value = impactId;
+}
+
+// Handle Brand Selector changes
+function handleBrandSelect() {
+  const select = document.getElementById("brand-select");
+  const val = select.value;
+  const urlInput = document.getElementById("dest-url");
+  const networkSelect = document.getElementById("network-select");
+  const merchantInput = document.getElementById("merchant-id");
+
+  if (!val || val === "custom") {
+    urlInput.value = "";
+    merchantInput.value = "";
+    return;
+  }
+
+  // Pre-configured brand mappings
+  const mappings = {
+    "monica-vinader": { url: "https://www.monicavinader.com", network: "awin", mid: "2682" },
+    "missoma": { url: "https://www.missoma.com", network: "awin", mid: "5373" },
+    "mejuri": { url: "https://mejuri.com", network: "impact", mid: "" },
+    "space-nk": { url: "https://www.spacenk.com", network: "awin", mid: "3569" },
+    "charlotte-tilbury": { url: "https://www.charlottetilbury.com", network: "awin", mid: "12345" },
+    "clinique": { url: "https://www.clinique.co.uk", network: "impact", mid: "" },
+    "elf": { url: "https://www.elfcosmetics.co.uk", network: "impact", mid: "" }
+  };
+
+  const config = mappings[val];
+  if (config) {
+    urlInput.value = config.url;
+    networkSelect.value = config.network;
+    merchantInput.value = config.mid;
+    handleNetworkChange();
+  }
+}
+
+function handleNetworkChange() {
+  const network = document.getElementById("network-select").value;
+  const merchantInput = document.getElementById("merchant-id");
+  if (network === "impact") {
+    merchantInput.placeholder = "Not required for Impact";
+    merchantInput.value = "";
+    merchantInput.disabled = true;
+  } else {
+    merchantInput.placeholder = "e.g. 2682";
+    merchantInput.disabled = false;
+  }
+}
+
 // Generates parameterized affiliate URLs
 function generateLink() {
-  const url = document.getElementById("dest-url").value;
+  const url = document.getElementById("dest-url").value.trim();
   const network = document.getElementById("network-select").value;
-  const campaign = document.getElementById("campaign-id").value || "organic";
+  const campaign = document.getElementById("campaign-id").value.trim() || "organic";
+  const merchantId = document.getElementById("merchant-id").value.trim();
+  
+  // Publisher IDs from inputs
+  const awinPubId = document.getElementById("pub-awin-id").value.trim();
+  const impactPubId = document.getElementById("pub-impact-id").value.trim();
 
   if (!url) {
     alert("Please enter a valid brand URL.");
@@ -363,9 +436,12 @@ function generateLink() {
   const cleanUrl = encodeURIComponent(url);
 
   if (network === "impact") {
-    finalUrl = `https://brand.sjv.io/c/392948/${campaign}/?u=${cleanUrl}`;
+    const memberId = impactPubId || "392948"; // default fallback
+    finalUrl = `https://brand.sjv.io/c/${memberId}/${campaign}/?u=${cleanUrl}`;
   } else if (network === "awin") {
-    finalUrl = `https://www.awin1.com/cread.php?awinmid=12345&clickref=${campaign}&ued=${cleanUrl}`;
+    const mid = merchantId || "12345";
+    const affid = awinPubId ? `&awinaffid=${awinPubId}` : "";
+    finalUrl = `https://www.awin1.com/cread.php?awinmid=${mid}${affid}&clickref=${campaign}&ued=${cleanUrl}`;
   } else {
     finalUrl = `https://www.anrdoezrs.net/click-998822-112233?sid=${campaign}&url=${cleanUrl}`;
   }
@@ -377,8 +453,12 @@ function generateLink() {
 function copyGeneratedLink() {
   const input = document.getElementById("aff-result");
   input.select();
-  document.execCommand("copy");
-  alert("Affiliate URL copied to clipboard! Ready to post.");
+  try {
+    document.execCommand("copy");
+    alert("Affiliate URL copied to clipboard! Ready to post.");
+  } catch (err) {
+    alert("Failed to copy. Please manually select and copy the text.");
+  }
 }
 
 // Floating Conversational AI Stylist Chatbot Logic

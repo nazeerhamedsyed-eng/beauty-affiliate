@@ -29,6 +29,22 @@
   --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+/* Custom Scrollbar for a premium look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-champagne);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rose-gold);
+}
+
 /* Reset and Base Styles */
 * {
   box-sizing: border-box;
@@ -150,7 +166,8 @@ p {
   z-index: 100;
   background: rgba(250, 249, 246, 0.85);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid rgba(197, 160, 131, 0.3);
+  box-shadow: 0 1px 10px rgba(197, 160, 131, 0.05);
 }
 
 .nav-container {
@@ -251,6 +268,7 @@ p {
   z-index: 2;
   max-width: 800px;
   color: #FFF;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 .hero-tag {
@@ -270,6 +288,7 @@ p {
   font-size: 3.5rem;
   line-height: 1.15;
   margin-bottom: 24px;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
 }
 
 .hero p {
@@ -279,6 +298,7 @@ p {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
 .hero-buttons {
@@ -365,22 +385,42 @@ p {
 }
 
 .filter-btn {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-light);
+  background: transparent;
+  border: 1px solid transparent;
   padding: 8px 20px;
-  border-radius: var(--radius-sm);
   font-family: var(--font-sans);
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   cursor: pointer;
+  color: var(--color-text-muted);
+  position: relative;
   transition: var(--transition-smooth);
 }
 
-.filter-btn:hover, .filter-btn.active {
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
   background-color: var(--color-rose-gold);
-  color: #FFF;
-  border-color: var(--color-rose-gold);
+  transition: var(--transition-smooth);
+  transform: translateX(-50%);
+}
+
+.filter-btn:hover {
+  color: var(--color-text-dark);
+}
+
+.filter-btn.active {
+  color: var(--color-text-dark);
+  font-weight: 500;
+}
+
+.filter-btn.active::after {
+  width: 60%;
 }
 
 /* Product Cards Grid - Staggered Art Gallery Layout */

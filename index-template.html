@@ -277,39 +277,77 @@
 
   <!-- Admin Link Helper Modal (Tool Demonstration) -->
   <div class="modal" id="admin-modal" style="display: none;">
-    <div class="modal-content glass-panel">
+    <div class="modal-content glass-panel" style="max-width: 550px;">
       <div class="modal-header">
-        <h3>Affiliate Link Helper (Admin Utility)</h3>
+        <h3>Affiliate Link Helper & Settings</h3>
         <button class="close-btn" onclick="closeAdminTool()">&times;</button>
       </div>
-      <p>Paste a standard manufacturer URL below, select the network, and this tool will generate the parameterized tracking link structure for your organic social media posts.</p>
       
-      <div class="form-group">
-        <label for="dest-url">Target Brand URL</label>
-        <input type="text" id="dest-url" placeholder="e.g., https://www.charlottetilbury.com/product/magic-cream">
+      <!-- Section 1: Publisher Credentials -->
+      <div style="background: rgba(197, 160, 131, 0.08); padding: 15px; border-radius: var(--radius-md); margin-bottom: 20px; border: 1px solid var(--border-light);">
+        <h4 style="margin-bottom: 10px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-rose-gold);">1. Save Your Publisher IDs (Stored in Browser)</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="pub-awin-id" style="font-size: 0.75rem;">Awin Publisher ID</label>
+            <input type="text" id="pub-awin-id" placeholder="e.g. 1029384" style="padding: 8px;" oninput="savePubSettings()">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="pub-impact-id" style="font-size: 0.75rem;">Impact Member ID</label>
+            <input type="text" id="pub-impact-id" placeholder="e.g. 392948" style="padding: 8px;" oninput="savePubSettings()">
+          </div>
+        </div>
       </div>
       
+      <!-- Section 2: Link Builder -->
+      <h4 style="margin-bottom: 15px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-rose-gold);">2. Generate Tracking Link</h4>
+      
       <div class="form-group">
-        <label for="network-select">Select Affiliate Platform</label>
-        <select id="network-select">
-          <option value="impact">Impact.com (e.g. Clinique/Deciem)</option>
-          <option value="awin">Awin (e.g. Charlotte Tilbury/MAC)</option>
-          <option value="cj">CJ Affiliate (e.g. Sephora)</option>
+        <label for="brand-select">Featured Brand Quick-Select</label>
+        <select id="brand-select" onchange="handleBrandSelect()">
+          <option value="">-- Select brand to auto-configure --</option>
+          <option value="monica-vinader">Monica Vinader (Awin mid: 2682)</option>
+          <option value="missoma">Missoma (Awin mid: 5373)</option>
+          <option value="mejuri">Mejuri (Impact.com)</option>
+          <option value="space-nk">Space NK (Awin mid: 3569)</option>
+          <option value="charlotte-tilbury">Charlotte Tilbury (Awin mid: 12345)</option>
+          <option value="clinique">Clinique (Impact.com)</option>
+          <option value="elf">e.l.f. Cosmetics (Impact.com)</option>
+          <option value="custom">-- Custom Brand / URL --</option>
         </select>
       </div>
+
+      <div class="form-group">
+        <label for="dest-url">Target Brand URL</label>
+        <input type="text" id="dest-url" placeholder="e.g., https://www.monicavinader.com/earrings">
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="network-select">Affiliate Network</label>
+          <select id="network-select" onchange="handleNetworkChange()">
+            <option value="impact">Impact.com</option>
+            <option value="awin">Awin</option>
+            <option value="cj">CJ Affiliate</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="merchant-id">Merchant ID (mid/sid)</label>
+          <input type="text" id="merchant-id" placeholder="e.g., 2682">
+        </div>
+      </div>
       
       <div class="form-group">
-        <label for="campaign-id">Traffic Source (Sub-ID)</label>
-        <input type="text" id="campaign-id" placeholder="e.g., tiktok-bio, pinterest-pin">
+        <label for="campaign-id">Traffic Source / Campaign (Sub-ID)</label>
+        <input type="text" id="campaign-id" placeholder="e.g., pinterest-pin, tiktok-bio">
       </div>
 
-      <button class="btn btn-primary" onclick="generateLink()">Build Tracking Link</button>
+      <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" onclick="generateLink()">Build Tracking Link</button>
 
-      <div class="generated-box" id="generated-box" style="display: none;">
-        <label>Your Tracking Affiliate Link:</label>
-        <div class="copy-input">
-          <input type="text" id="aff-result" readonly>
-          <button onclick="copyGeneratedLink()">Copy</button>
+      <div class="generated-box" id="generated-box" style="display: none; margin-top: 20px;">
+        <label style="font-weight: 500; font-size: 0.8rem; color: var(--color-rose-gold); text-transform: uppercase; display: block; margin-bottom: 5px;">Your Tracking Affiliate Link:</label>
+        <div class="copy-input" style="display: flex; gap: 10px; margin-top: 5px;">
+          <input type="text" id="aff-result" readonly style="flex-grow: 1; padding: 10px; background: rgba(30, 32, 34, 0.05); border: 1px solid var(--border-light); border-radius: var(--radius-sm); outline: none;">
+          <button class="btn btn-primary" style="padding: 0 20px;" onclick="copyGeneratedLink()">Copy</button>
         </div>
       </div>
     </div>
